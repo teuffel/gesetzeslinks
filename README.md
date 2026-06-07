@@ -48,8 +48,8 @@ In der Web-Variante gibt es **kein** „Load unpacked plugin". Plugins werden
 2. Plugins-Dashboard öffnen (`t p`).
 3. **Load unpacked plugin** → diesen Ordner auswählen.
 
-In beiden Fällen wird das SDK (`@logseq/libs`) per jsDelivr-CDN geladen;
-kein Build-Schritt nötig.
+Das SDK (`@logseq/libs` 0.3.3, passend zum hypha-Core) ist als
+`lsplugin.user.js` mitgeliefert; kein Build-Schritt nötig.
 
 ## Unbekannte Gesetze ergänzen
 
