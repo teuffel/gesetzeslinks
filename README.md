@@ -32,10 +32,10 @@ In der Web-Variante gibt es **kein** „Load unpacked plugin". Plugins werden
 4. **Install from web URL** wählen und die **jsDelivr-URL** eintragen:
 
    ```
-   https://cdn.jsdelivr.net/gh/teuffel/gesetzeslinks@main/
+   https://cdn.jsdelivr.net/gh/teuffel/gesetzeslinks@master/
    ```
 
-   (Statt `@main` kann ein Tag/Commit gepinnt werden, z. B. `@v0.1.0`.)
+   (Statt `@master` kann ein Tag/Commit gepinnt werden, z. B. `@v0.1.0`.)
 5. **Install** klicken.
 
 > Hinweis: Die GitHub-`https://github.com/...`-URL funktioniert hier **nicht**
