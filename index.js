@@ -2,6 +2,7 @@
    klickbare Links auf gesetze-im-internet.de.
    Lädt @logseq/libs (window.logseq), GLParser, GLGesetze, GLForm als globale Scripts. */
 
+(function () {
 const { rewrite, parseMacroArgs } = window.GLParser;
 const { buildUrl } = window.GLGesetze;
 
@@ -103,3 +104,4 @@ function main() {
 }
 
 logseq.ready(main).catch(console.error);
+})();

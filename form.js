@@ -8,6 +8,13 @@
   const saveBtn = document.getElementById('gl-save');
   const cancelBtn = document.getElementById('gl-cancel');
 
+  // Defensiv: fehlt ein Element, Formular deaktivieren statt den Plugin-Load
+  // zu killen (ein Fehler hier würde logseq.ready() blockieren -> Handshake-Timeout).
+  if (!el || !abbrInput || !slugInput || !anchorSel || !saveBtn || !cancelBtn) {
+    window.GLForm = { open() { logseq.UI.showMsg('Formular nicht verfügbar.', 'warning'); } };
+    return;
+  }
+
   function close() {
     logseq.hideMainUI();
   }

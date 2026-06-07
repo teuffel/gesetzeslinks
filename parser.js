@@ -9,6 +9,8 @@
 // Mittelteil (Abs./Satz/Nr.) wird mitgeschluckt, damit das Label vollständig ist,
 // fließt aber nicht in die URL ein.
 // Abkürzung: Großbuchstabenwort (2+), optional gefolgt von römischer Zahl (SGB V).
+
+(function () {
 const REF_RE =
   /(§§?|Art\.?)\s*(\d+[a-z]?)((?:\s+(?:Abs\.?|Satz|S\.|Nr\.?|Halbsatz|Alt\.?)\s*\d+[a-z]?)*)\s+([A-ZÄÖÜ][A-ZÄÖÜa-z]*(?:\s+[IVXLC]+)?)/g;
 
@@ -76,3 +78,4 @@ const api = { REF_RE, findRefs, rewrite, parseMacroArgs, spansInsideMacros };
 
 if (typeof module !== 'undefined' && module.exports) module.exports = api;
 if (typeof window !== 'undefined') window.GLParser = api;
+})();

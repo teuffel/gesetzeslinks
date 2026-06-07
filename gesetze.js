@@ -6,6 +6,7 @@
 //
 // Verifizierte Sonderfälle: GG (art_), StVO (stvo_2013), SGB V (sgb_5).
 
+(function () {
 const BASE = 'https://www.gesetze-im-internet.de';
 
 // Eingebautes Mapping: Top-Gesetze des Alltags. Schlüssel sind GROSSGESCHRIEBEN
@@ -86,3 +87,4 @@ const api = { BASE, BUILTIN, normKey, resolve, buildUrl };
 
 if (typeof module !== 'undefined' && module.exports) module.exports = api;
 if (typeof window !== 'undefined') window.GLGesetze = api;
+})();
