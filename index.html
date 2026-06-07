@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gesetzeslinks</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: transparent; }
+      body { display: flex; align-items: center; justify-content: center;
+             font-family: var(--ls-font-family, system-ui, sans-serif); }
+      #gl-form {
+        background: var(--ls-primary-background-color, #fff);
+        color: var(--ls-primary-text-color, #222);
+        border: 1px solid var(--ls-border-color, #ddd);
+        border-radius: 8px; padding: 16px 18px; width: 320px;
+        box-shadow: 0 8px 30px rgba(0,0,0,.25);
+      }
+      #gl-form h3 { margin: 0 0 4px; font-size: 15px; }
+      #gl-form p.hint { margin: 0 0 12px; font-size: 12px; opacity: .7; }
+      #gl-form label { display: block; font-size: 12px; margin: 8px 0 2px; }
+      #gl-form input, #gl-form select {
+        width: 100%; box-sizing: border-box; padding: 6px 8px;
+        border: 1px solid var(--ls-border-color, #ccc); border-radius: 4px;
+        background: var(--ls-secondary-background-color, #fafafa);
+        color: inherit; font-size: 13px;
+      }
+      #gl-form code { font-size: 11px; opacity: .8; }
+      .gl-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+      .gl-actions button {
+        padding: 6px 12px; border-radius: 4px; border: 1px solid var(--ls-border-color, #ccc);
+        cursor: pointer; font-size: 13px; background: var(--ls-secondary-background-color, #f0f0f0);
+        color: inherit;
+      }
+      .gl-actions #gl-save { background: var(--ls-active-primary-color, #2563eb); color: #fff; border-color: transparent; }
+    </style>
+  </head>
+  <body>
+    <div id="gl-form">
+      <h3>Gesetz-Zuordnung ergänzen</h3>
+      <p class="hint">URL-Slug auf gesetze-im-internet.de eintragen.</p>
+      <label for="gl-abbr">Abkürzung</label>
+      <input id="gl-abbr" type="text" placeholder="z. B. DSGVO" />
+      <label for="gl-slug">URL-Slug</label>
+      <input id="gl-slug" type="text" placeholder="z. B. bdsg_2018" />
+      <label for="gl-anchor">Anker-Schema</label>
+      <select id="gl-anchor">
+        <option value="p">§ (Paragraph) – /__&lt;nr&gt;.html</option>
+        <option value="art">Art. (Artikel) – /art_&lt;nr&gt;.html</option>
+      </select>
+      <div class="gl-actions">
+        <button id="gl-cancel">Abbrechen</button>
+        <button id="gl-save">Speichern</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@logseq/libs@0.0.17/dist/lsplugin.user.min.js"></script>
+    <script src="./gesetze.js"></script>
+    <script src="./parser.js"></script>
+    <script src="./index.js"></script>
+    <script src="./form.js"></script>
+  </body>
+</html>

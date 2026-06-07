@@ -1,0 +1,13 @@
+{
+  "name": "logseq-gesetzeslinks",
+  "version": "0.1.0",
+  "description": "Erkennt deutsche Gesetzesreferenzen (§/Art.) und verlinkt sie auf gesetze-im-internet.de.",
+  "author": "teuffel",
+  "license": "MIT",
+  "main": "index.html",
+  "logseq": {
+    "id": "logseq-gesetzeslinks",
+    "title": "Gesetzeslinks",
+    "icon": "./icon.svg"
+  }
+}
